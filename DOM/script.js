@@ -43,6 +43,22 @@ document.getElementById(``);
 document.createElement();
 document.appendChild();
 
+document.createElement(element); -->  creates an html element
+        let myDiv = document.createElement("div")
+document.append(element); -->  Add an html element
+        document.append(myDiv)
+
+let header = document.createElement("h1");
+
+        paragraph.append("Hello World");
+Element Node Properties
+-className
+-id
+-innerHTML
+-style
+-tagName
+
+
 */
 
 //Changing html via javascript
@@ -62,7 +78,110 @@ paragraph4.className = "newclass";
 */
 
 // Setting Attributes
-//element.setAtrribute(attribute, value)
+ /*
+
+ element.attribute = new value
+ myDiv.id = "newID"
+
+ same as 
+
+element.setAtrribute(attribute, value);
+myDiv.setAttribute("id", "NewId")
+
+
+EXAMPLE
 
 let link = document.getElementById ("link");
 link.setAttribute("href", "https://www.google.com");
+
+*/
+
+
+
+//Modifying an Element's Style
+/*
+varcommentTag = document.getElementById("specificTag");
+
+commentTag.style.backgroundColor = "#FFFF00";
+commentTag.style.borderwith = "3px";
+commentTag.style.fontsize = "24px"; 
+
+
+let paragraph4 = document.getElementById('text');
+
+let newText1 = "<strong> Changed text with JavaScript </strong>";
+
+paragraph4.innerText = "<strong> newText1 </strong>" ; //would only take in text so would need to add tags to new text i.e. "<p> text </p>"
+paragraph4.style.color = "red";
+paragraph4.style.backgroundColor = "blue";
+document.body.style.backgroundColor = "maroon";
+
+*/
+
+//Modifying Styling - Prefered Method --> using classes
+/*
+label.classList.addClass("someClassName");
+label.classList.removeClass("someClassName");
+label.classList.toggle("someClassName");
+
+//toggle --> means if it exists add it, if it doesn't replace it
+*/
+
+
+
+let paragraph = document.getElementById('text');
+
+//let newText = "<strong> Changed text with JavaScript </strong>";
+
+//paragraph4.innerText = "<strong> newText1 </strong>" ; //would only take in text so would need to add tags to new text i.e. "<p> text </p>"
+paragraph.innerHTML = "Hello World";
+
+
+//paragraph.classList.add("jschange");
+
+//Removing Elements
+
+//element.remove () - removes completely from the document
+
+//paragraph.remove()
+
+
+//JAVASCRIPT EVENTS
+
+/* Event is an action that can be detected by JS. 
+event is triggered, then it can be caught by JS functions 
+
+    there is inline event handlers & event listeners (happens within javascript as opposed dto inline html)
+
+    events are usually on"something"
+*/
+
+    function clickFunction() {
+        paragraph.innerHTML = "Welcome to this page"
+    }
+
+    paragraph.addEventListener("click", clickFunction);
+
+
+
+/*
+   function clickFunction() {
+        paragraph.classList.toggle = "Welcome to this page"
+  }
+
+
+    /* greetingBox.addEventListener('click', alert('Good Morning'));
+        state variable, use an event listener, say waht type of event it is, and then state what it will do
+*/
+
+function clickFunctionOut() {
+    paragraph.innerHTML = "Hey"
+}
+
+
+paragraph.addEventListener("mouseleave", clickFunctionOut);
+
+/*
+//also can do it via button
+let button = document.getElementById("btn");
+button.addEventListener("click", clickFunction); */

@@ -185,3 +185,18 @@ paragraph.addEventListener("mouseleave", clickFunctionOut);
 //also can do it via button
 let button = document.getElementById("btn");
 button.addEventListener("click", clickFunction); */
+
+
+/*documentById("img");
+
+
+function hoverFunction() {
+    myImage.style.transform = "scale(1.2, 1.2)"
+}
+
+function hoverFunction2() {
+    myImage.style.transform = "scale(1, 1)"
+}
+
+myImage.addEventListener("mouseenter", hoverFunction)
+myImage.addEventListener("mouseleave", hoverFunction2) */
